@@ -1,0 +1,20 @@
+- Create a ebike store database
+
+CREATE TABLE ebikes (id INTEGER PRIMARY KEY, brand TEXT, price NUMERIC, stock NUMERIC);
+INSERT INTO ebikes values (1, "Rad Power Bikes", 1500, 9);
+INSERT INTO ebikes values (2, "Ride1Up", 1000, 10);
+INSERT INTO ebikes values (3, "Super 73", 3500, 15);
+INSERT INTO ebikes values (4, "Aventon", 1200, 5);
+INSERT INTO ebikes values (5, "Rurui", 2000, 9);
+
+- Display brands and amount in stock of each 
+
+SELECT * FROM ebikes;
+
+- Display the total value of all stock
+SELECT SUM(price*stock) FROM ebikes;
+
+- Display the data base ordered by price
+
+SELECT * FROM ebikes WHERE price < 3500 ORDER BY price;
+SELECT * FROM ebikes WHERE price > 1000 ORDER BY price;
